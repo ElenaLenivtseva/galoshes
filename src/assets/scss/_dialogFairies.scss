@@ -1,0 +1,74 @@
+.dialogFairies {
+    padding: 7rem 0;
+    @include breakpoint($between-bp) {
+        padding: 0;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+            "phrase1 ."
+            ". phrase2"
+            "phrase3 .";
+            @include breakpoint($between-bp) {
+                display: block;
+            }
+    }
+    &__title {
+        margin-bottom: 1em;
+        @include breakpoint($between-bp) {
+            margin-bottom: 0.7em;
+        }
+    }
+    &__phrase {
+        // margin-left: -1000px;
+        @include breakpoint($between-bp) {
+            margin-bottom: 5rem;
+        }
+        padding-right: 10%;
+        &:nth-child(1) {
+            grid-area: phrase1;
+        }
+        &:nth-child(2) {
+            grid-area: phrase2;
+        }
+        &:nth-child(3) {
+            grid-area: phrase3;
+        }
+        &--right {
+            // margin-left: 0;
+            // margin-right: -1000px;
+            padding-right: 0;
+            padding-left: 10%;
+            @include breakpoint($between-bp) {
+                padding-left: 0;
+            }
+        }
+        transition: 2s ease-in;
+        -webkit-transition: 2s ease-in;
+        -moz-transition: 2s ease-in;
+        -ms-transition: 2s ease-in;
+        -o-transition: 2s ease-in;
+}
+    
+    
+    &__text {
+        padding-left: 15%;
+        opacity: 0;
+        transition: 0.5s ease-in;
+        -webkit-transition: 0.5s ease-in;
+        -moz-transition: 0.5s ease-in;
+        -ms-transition: 0.5s ease-in;
+        -o-transition: 0.5s ease-in;
+        &.__active {
+            opacity: 1;
+        }
+        @include breakpoint($tablet-bp) {
+            padding-left: 7%;
+        }
+        @include breakpoint($between-bp) {
+            padding-left: 0;
+        }
+    }
+}

@@ -1,0 +1,37 @@
+.bird {
+    transform: scale(-1,1);
+    transition: 6s linear;
+    -webkit-transition: 6s linear;
+    -moz-transition: 6s linear;
+    -ms-transition: 6s linear;
+    -o-transition: 6s linear;
+    -webkit-transform: scale(-1,1);
+    -moz-transform: scale(-1,1);
+    -ms-transform: scale(-1,1);
+    -o-transform: scale(-1,1);
+    :hover {
+        cursor: pointer;
+    }
+}
+.bird-wrap {
+    position: relative;
+}
+.bird--fly {
+    z-index: 2;
+    
+    position: absolute;
+    animation-name: fly;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+    
+}
+@keyframes fly {
+    from {
+        left: 70%;
+        top: 60%;
+    }
+    to {
+        left: 220%;
+        top: -50%;
+    }
+}

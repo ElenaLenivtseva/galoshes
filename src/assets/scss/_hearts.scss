@@ -1,0 +1,65 @@
+.heart-slider {
+    // display: flex;
+    // margin: 11rem 0;
+}
+.swiper-wrapper {
+    display: flex;
+    margin: 5rem 0;
+    @include breakpoint($tablet-bp) {
+        margin: 3rem 0 1rem 0;
+    }
+    
+}
+.heart-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    // background: $yellow;
+    padding-bottom: 5rem;
+
+    &:not(:last-child) {
+        margin-right: 3%;
+    }
+    &__top {
+        margin-top: 3rem;
+        height: 40rem;
+        // width: 40rem;
+        background: $white;
+        @include breakpoint($tablet-bp) {
+            height: 30rem;
+        }
+    }
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+        &-out {
+            width: 5rem;
+            position: absolute;
+            left: 43%;
+        }
+    }
+    &__bottom {
+        background: $yellow;
+        padding: 0 10%;
+        height: 30rem;
+        overflow-y: scroll;
+        @include breakpoint($tablet-bp) {
+            height: 20rem;
+        }
+    }
+    &__add {
+        height: 5rem;
+        background: $yellow;
+    }
+}
+.swiper-pagination {
+    margin-top: 2rem;
+}
+.swiper-button-next, .swiper-button-prev {
+    color: $green;
+    background: $white;
+    padding: 0.5%;
+    top: 40%;
+}

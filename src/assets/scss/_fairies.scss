@@ -1,0 +1,43 @@
+.fairies {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 3rem;
+        text-align: center;
+        
+        @include breakpoint($between-bp) {
+            grid-template-columns: 1fr;
+        }
+    }
+    // &__right, &__left {
+    //     max-width: 50%;
+    // }
+    &__img-wrap {
+        height: 60rem;
+    }
+    &__img {
+        max-width: 100%;
+        object-fit: cover;
+        height: 60rem;
+    }
+    &__text {
+        padding: 0 15%;
+    }
+    &__title {
+        margin-bottom: 0.5em;
+        margin-top: 1em;
+    }
+    &__descr {
+        opacity: 0;
+        transition: 2s;
+        -webkit-transition: 2s;
+        -moz-transition: 2s;
+        -ms-transition: 2s;
+        -o-transition: 2s;
+        &.__active {
+            opacity: 1;
+        }
+    }
+}

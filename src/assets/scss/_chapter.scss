@@ -1,0 +1,20 @@
+.chapter {
+    overflow: hidden;
+    padding: 11rem 0 6rem 0;
+    @include breakpoint($tablet-bp) {
+        padding: 9rem 0 4rem 0;
+    }
+    @include breakpoint($tablet-bp) {
+        padding: 4rem 0 1rem 0;
+    }
+    &__wrap {
+        width: 60%;
+       
+        @include breakpoint($tablet-bp) {
+            width: 95%;
+        }
+        
+        
+    };
+    
+}

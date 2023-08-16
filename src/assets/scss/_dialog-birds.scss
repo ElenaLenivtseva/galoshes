@@ -1,0 +1,106 @@
+.dialog-birds {
+    overflow: hidden;
+    padding: 10rem 0;
+    @include breakpoint($tablet-bp) {
+        padding: 5rem 0;
+    }
+    
+    &__images {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: -7rem;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-rows: auto;
+        // height: 30rem;
+        @include breakpoint($tablet-bp) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 0;
+        }
+    }
+    &__img {
+        max-width: 100%;
+        max-height: 30rem;
+        object-fit: cover;
+    }
+    &__boy {
+        max-height: 80rem;
+    }
+    &__all {
+        position: relative;
+        
+    // height: 300rem;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-areas: l1 .;
+    }
+    &__sms {
+        max-width: 40%;
+        color: $orange;
+        position: relative;
+        // left: -200%;
+        // top: 40rem;
+        transform: translate(-120%, 0px);
+        -webkit-transform: translate(-120%, 0px);
+        -moz-transform: translate(-120%, 0px);
+        -ms-transform: translate(-120%, 0px);
+        -o-transform: translate(-120%, 0px);
+        transition: 1s ease-in-out;
+        -webkit-transition: 1s ease-in-out;
+        -moz-transition: 1s ease-in-out;
+        -ms-transition: 1s ease-in-out;
+        -o-transition: 1s ease-in-out;
+        @include breakpoint($tablet-bp) {
+            max-width: 60%;
+        }
+        @include breakpoint($mobile-bp) {
+            max-width: 100%;
+        }
+        &:nth-child(2n) {
+            color: $green;
+            text-align: right;
+            margin-left: 60%;
+            //left: 200%;
+            transform: translate(180%, 0px);
+            -webkit-transform: translate(180%, 0px);
+            -moz-transform: translate(180%, 0px);
+            -ms-transform: translate(180%, 0px);
+            -o-transform: translate(180%, 0px);
+            @include breakpoint($tablet-bp) {
+                margin-left: 40%;
+            }
+            @include breakpoint($mobile-bp) {
+                margin-left: 0;
+            }
+        }
+        .text-chapter {
+            color: inherit;
+            font-size: 1.8rem;
+        }
+        @for $i from 1 through 7 {
+            &--#{$i} {
+                transition: 1s ease-in-out #{$i/4}s;
+                -webkit-transition: 1s ease-in-out #{$i/4}s;
+                -moz-transition: 1s ease-in-out #{$i/4}s;
+                -ms-transition: 1s ease-in-out #{$i/4}s;
+                -o-transition: 1s ease-in-out #{$i/4}s;
+            }
+        }
+        
+        &.__active {
+            transform: translate(0%, 0px);
+            -webkit-transform: translate(0%, 0px);
+            -moz-transform: translate(0%, 0px);
+            -ms-transform: translate(0%, 0px);
+            -o-transform: translate(0%, 0px);
+}
+        
+}
+    &__left {
+
+    }
+    &__right {
+        text-align: right;
+    }
+}

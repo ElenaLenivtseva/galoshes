@@ -1,0 +1,105 @@
+.map {
+    padding: 7rem 0;
+    @include breakpoint($tablet-bp) {
+        padding: 3rem 0;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        @include breakpoint($mobile-bp) {
+            grid-template-columns: 1fr;
+        }
+    }
+    &__item {
+        display: block;
+        position: relative;
+        padding: 8%;
+        background: $green;
+        color: $white;
+        font-size: 2.4rem;
+        height: 20rem;
+        @include breakpoint($tablet-bp) {
+            font-size: 1.9rem;
+        }
+        @include breakpoint($between-bp) {
+            font-size: 1.3rem;
+            height: 13rem;
+        }
+        @include breakpoint($mobile-bp) {
+            font-size: 1.5rem;
+        }
+        &:nth-child(1) {
+            border-top-left-radius: 50px;
+            @include breakpoint($mobile-bp) {
+                border-top-right-radius: 50px;
+            }
+        }
+        &:nth-child(2) {
+            border-top-right-radius: 50px;
+            @include breakpoint($mobile-bp) {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+            }
+            // background: $orange;
+        }
+        &:nth-child(3) {
+            // background: $orange;
+        }
+        &:nth-child(4) {
+            border-bottom-right-radius: 50px;
+            @include breakpoint($mobile-bp) {
+                border-radius: 0;
+                -webkit-border-radius: 0;
+                -moz-border-radius: 0;
+                -ms-border-radius: 0;
+                -o-border-radius: 0;
+            }
+        }
+        &:nth-child(5) {
+            border-bottom-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            
+        }
+        &:hover {
+            cursor: pointer;
+            // display: flex;
+            // flex-direction: column;
+            // justify-content: center;
+            color: $black;
+            background: $yellow;            
+        }
+        &:active {
+            opacity: 0.7;
+        }
+        transition: 0.55s ease;
+        -webkit-transition: 0.55s ease;
+        -moz-transition: 0.55s ease;
+        -ms-transition: 0.55s ease;
+        -o-transition: 0.55s ease;
+        
+}
+    &__title {
+        color: inherit;
+        font-family: inherit;
+        line-height: inherit;
+        font-size: inherit;
+    }
+    &__number {
+        color: inherit;
+        margin-bottom: 0.4em;
+        
+    }
+    &__img-out {
+        position: absolute;
+        top: 10%;
+        left: 4%;
+        @include breakpoint($tablet-bp) {
+            top: 6%;
+            width: 2rem;
+        }
+    }
+}

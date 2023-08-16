@@ -1,0 +1,33 @@
+.steps {
+    padding: 16rem 0 10rem 26rem;
+    display: flex;
+    &__item {
+        width: 48rem;
+        padding-top: 16.8rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+    }
+    &__title {
+        text-transform: uppercase;
+        letter-spacing: 1%;
+        font-size: 4rem;
+        margin-bottom: 0.25em;
+    }
+    &__number {
+        position: absolute;
+        font-family: Lato;
+        top: 0;
+        // top: 16.8rem;
+        left: 14.2rem;
+        color: $number;
+        font-size: 22rem;
+        z-index: -2;
+    }
+    &__text {
+        font-size: 1.6rem;
+    }
+}

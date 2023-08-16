@@ -1,0 +1,109 @@
+.compare-img {
+    position: relative;
+    max-width: 60%;
+    margin: 8rem 0;
+    @include breakpoint($tablet-bp) {
+        max-width: 95%;
+        margin: 4rem 0;
+    }
+    @include breakpoint($anim-bp500) {
+        margin-bottom: 2rem;
+    }
+    &__popUp-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+
+    
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        // background: $black;
+        height: 20rem;
+        @include breakpoint($between-bp) {
+            height: 15rem;
+        }
+        @include breakpoint($mobile-bp) {
+            height: 10rem;
+        }
+    }
+    &__title {
+        font-size: 3rem;
+        font-weight: bold;
+        font-family: $americaFont;
+        margin-bottom: 1em;
+        text-align: center;
+        @include breakpoint($between-bp) {
+            font-size: 2.5rem;
+        }
+        @include breakpoint($anim-bp500) {
+            margin-bottom: 0;
+        }
+        @include breakpoint($mobile-bp) {
+            font-size: 2rem;
+        }
+    }
+    &__left, &__right {
+        :hover {
+            cursor: pointer;
+        }
+        border: 1px dashed $black;
+    }
+    &__opt {
+        max-width: 100%;
+        object-fit: cover;        
+    }
+    &--message {
+        border-radius: 3rem;
+        -webkit-border-radius: 3rem;
+        -moz-border-radius: 3rem;
+        -ms-border-radius: 3rem;
+        -o-border-radius: 3rem;
+        transform: translate(0, -120%);
+        -webkit-transform: translate(0, -120%);
+        -moz-transform: translate(0, -120%);
+        -ms-transform: translate(0, -120%);
+        -o-transform: translate(0, -120%);
+        opacity: 0;
+        transition: 0.7s ease;
+        -webkit-transition: 0.7s ease;
+        -moz-transition: 0.7s ease;
+        -ms-transition: 0.7s ease;
+        -o-transition: 0.7s ease;
+        position: absolute;
+        // top: 40%;
+        // left: 23%;
+        background: $green;
+        //height: 20rem;
+        padding: 5% 5%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        &.__active {
+                transform: translate(0);
+                -webkit-transform: translate(0);
+                -moz-transform: translate(0);
+                -ms-transform: translate(0);
+                -o-transform: translate(0);
+                opacity: 1;
+        }
+            &__text {
+                color: $white;
+                // margin-bottom: 1em;
+                @include breakpoint($mobile-bp) {
+                    font-size: 1.5rem;
+                }
+                @include breakpoint($anim-bp300) {
+                    font-size: 1.2rem;
+                }
+            }
+        
+        
+}
+}

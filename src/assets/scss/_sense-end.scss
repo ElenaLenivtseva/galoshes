@@ -1,0 +1,15 @@
+.sense-end {
+    padding-bottom: 12rem;
+
+    &__title {
+        font-family: $americaFont;
+        font-size: 3rem;
+        color: $orange;
+        @include breakpoint($mobile-bp) {
+            font-size: 2rem;
+        }
+    }
+    @include breakpoint($tablet-bp) {
+        padding-bottom: 8rem;
+    }
+}

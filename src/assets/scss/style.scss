@@ -1,0 +1,31 @@
+/* Default Styles */
+// *,
+// *::after,
+// *::before {
+//     margin: 0;
+//     box-sizing: border-box;
+// }
+// h1 {
+//     color: red;
+// }
+@import "_vars.scss";
+@import "_mixins.scss";
+
+@import "_reset.scss";
+@import "_text.scss";
+@import "_menu.scss";
+@import "_galoshes.scss";
+@import "_fairies.scss";
+@import "_dialogFairies.scss";
+@import "_dragFairy.scss";
+@import "_map.scss";
+@import "_chapter.scss";
+@import "_hearts.scss";
+@import "_table.scss";
+@import "_compareImg.scss";
+@import "_bird.scss";
+@import "_dialog-birds.scss";
+@import "_animation.scss";
+@import "_sense-end.scss";
+
+

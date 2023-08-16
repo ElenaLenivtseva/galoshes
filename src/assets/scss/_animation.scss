@@ -1,0 +1,217 @@
+.chapter5-kaloshi {
+    width: 30rem;
+    opacity: 1;
+    @include breakpoint($tablet-bp) {
+        width: 20rem;
+    }
+    @include breakpoint($between-bp) {
+        width: 15rem;
+    }
+    @include breakpoint($mobile-bp) {
+        width: 10rem;
+    }
+    &__1 {
+        transition: 2s linear 1s;
+        -webkit-transition: 2s linear 1s;
+        -moz-transition: 2s linear 1s;
+        -ms-transition: 2s linear 1s;
+        -o-transition: 2s linear 1s;
+}
+    &__2 {
+        transition: 2s linear 3s;
+        -webkit-transition: 2s linear 3s;
+        -moz-transition: 2s linear 3s;
+        -ms-transition: 2s linear 3s;
+        -o-transition: 2s linear 3s;
+}
+    &__1.__active, &__2.__active {
+        opacity: 0;
+    }
+
+
+}
+
+// @keyframes disappear{
+//     from {
+//         opacity: 1;
+//     }
+//     to {
+//         opacity: 0;
+//     }
+// }
+.illustr {
+    max-width: 100%;
+    margin: 8rem 0;
+    &__img {
+        max-width: 70%;
+        transition: 2s;
+        -webkit-transition: 2s;
+        -moz-transition: 2s;
+        -ms-transition: 2s;
+        -o-transition: 2s;
+        animation-direction: alternate;
+	    animation-duration: 3s;
+	    animation-name: move;
+	    animation-iteration-count: infinite;
+	    animation-timing-function: linear;
+    }
+    @include breakpoint($tablet-bp) {
+        display: flex;
+        justify-content: center;
+        margin: 4rem 0;
+    }
+}
+.img-out {
+    position: absolute;
+    right: 0;
+    width: 40%;
+}
+
+@keyframes move {
+    from {
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+}
+	to {
+		transform: rotate(-30deg);
+		-webkit-transform: rotate(-30deg);
+		-moz-transform: rotate(-30deg);
+		-ms-transform: rotate(-30deg);
+		-o-transform: rotate(-30deg);
+}
+}
+.begger {
+    width: 60%;
+    &.__active {
+        animation-name: beg;
+        animation-direction: alternate;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+    }
+   
+    
+}
+@keyframes beg {
+    from {
+        transform: translate3d(42px, -62px, -135px);
+        -webkit-transform: translate3d(42px, -62px, -135px);
+        -moz-transform: translate3d(42px, -62px, -135px);
+        -ms-transform: translate3d(42px, -62px, -135px);
+        -o-transform: translate3d(42px, -62px, -135px);
+    }
+      to {
+        transform: translate3d(-2.7rem, 0, 1rem);
+        -webkit-transform: translate3d(0);
+        -moz-transform: translate3d(0);
+        -ms-transform: translate3d(0);
+        -o-transform: translate3d(0);
+}
+      
+} 
+// .note {
+//     // border-bottom: 1px dashed $green;
+//     vertical-align: super;
+//   font-size: smaller;
+//   color: $green;
+//         &:hover {
+//             &::after {
+//                 content: "намек на «Обыкновенные истории» датской писательницы Гюллембург"; /* Добавляемый текст */ 
+//                 color: $white; /* Цвет текста */ 
+//                 background-color: $black; /* Цвет фона */ 
+//                 font-size: 90%; /* Размер шрифта */ 
+//                 padding: 0.5%;
+//                 z-index: 4;
+//             }
+//         }
+
+// }
+.note {
+    border-bottom: 2px dashed $orange;
+    transition: 1s ease-in;
+    -webkit-transition: 1s ease-in;
+    -moz-transition: 1s ease-in;
+    -ms-transition: 1s ease-in;
+    -o-transition: 1s ease-in;
+
+    &:hover {
+            &::after {
+                content: "";
+                // content: "намек на «Обыкновенные истории» датской писательницы Гюллембург"; /* Добавляемый текст */ 
+                color: $white; /* Цвет текста */ 
+                background-color: $orange; /* Цвет фона */ 
+                font-size: 90%; /* Размер шрифта */ 
+                padding: 0.5%;
+                z-index: 4;
+            }
+        }
+}
+// #note-1 {
+//     &:hover {
+//         &::after {
+//             content: "намек на «Обыкновенные истории» датской писательницы Гюллембург"; /* Добавляемый текст */ 
+//         }
+//     }
+// }
+
+// I глава 
+#note-1 {
+    &:hover {
+        &::after {
+            content: "скромность (лат.)";  
+        }
+    }
+}
+#note-2 {
+    &:hover {
+        &::after {
+            content: "я другого мнения (лат.)"; 
+        }
+    }
+}
+#note-3 {
+    &:hover {
+        &::after {
+            content: "суждение (лат.)"; 
+        }
+    }
+}
+#note-4 {
+    &:hover {
+        &::after {
+            content: "место ученых бесед (лат.)"; 
+        }
+    }
+}
+#note-5 {
+    &:hover {
+        &::after {
+            content: "намек на «Обыкновенные истории» датской писательницы Гюллембург"; 
+        }
+    }
+}
+#note-6 {
+    &:hover {
+        &::after {
+            content: "Знаменитый датский писатель Хольберг рассказывает в своей «Истории Датского государства», что, прочитав роман о рыцарях Круглого стола, король Ганс однажды сказал в шутку своему приближенному Отто Руду, которого очень любил: «Эти господа Ифвент и Гаудиан, о которых говорится в этой книге, были замечательные рыцари. Таких теперь больше не встретишь». На что Отто Руд ответил: «Если бы теперь встречались такие короли, как король Артур, то, наверное, нашлось бы немало таких рыцарей, как Ифвент и Гаудиан». (Примечание Андерсена)"; 
+        }
+    }
+}
+#note-7 {
+    &:hover {
+        &::after {
+            content: "при короле Гансе, в 1495 году, был выпущен указ, по которому женщины легкого поведения должны носить чепчики бросающейся в глаза расцветки"; 
+        }
+    }
+}
+// V глава
+#note-8 {
+    &:hover {
+        &::after {
+            content: "Господин, помогите несчастным! (итал.)";
+        }
+    }
+}

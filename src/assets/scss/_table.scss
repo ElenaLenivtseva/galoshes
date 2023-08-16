@@ -1,0 +1,71 @@
+.tableMeans {
+    margin: 8rem 0;
+    max-width: 60%;
+    @include breakpoint($tablet-bp) {
+        max-width: 95%;
+    }
+    @include breakpoint($anim-bp500) {
+        margin: 6rem 0;
+    }
+    @include breakpoint($mobile-bp) {
+        margin: 3rem 0;
+    }
+    &__wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include breakpoint($mobile-bp) {
+            grid-template-columns: 1fr;
+        }
+    }
+    
+    &__caption {
+        font-size: 4rem;
+        font-weight: bold;
+        font-family: $americaFont;
+        margin-bottom: 1em;
+        text-align: center;
+        @include breakpoint($mobile-bp) {
+            font-size: 2rem;
+        }
+    }
+    &__row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__cell {
+        background: $yellow;
+        color: $black;
+        padding: 5%;
+        border: 1px solid $white;
+        @include breakpoint($mobile-bp) {
+            line-height: 0.8em;
+        }
+    }
+    &__title {
+        // border: 1px solid $black;
+        // background: $white;
+        // color: $black;
+        font-weight: bold;
+        font-size: 2.5rem;
+        @include breakpoint($tablet-bp) {
+            font-size: 2rem;
+        }
+        @include breakpoint($mobile-bp) {
+            font-size: 1.2rem;
+        }
+    }
+    &__text {
+        @include breakpoint($anim-bp500) {
+            font-size: 1.5rem;
+        }
+        @include breakpoint($mobile-bp) {
+            font-size: 1rem;
+        }
+        
+    }
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
